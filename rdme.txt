@@ -1,0 +1,51 @@
+https://tutorials.kode-blog.com/laravel-blade-template
+https://tutorials.kode-blog.com/laravel-blade-template
+
+
+http://v3.golaravel.com/api/source-class-Laravel.Database.Schema.html#7-194
+https://laravel.com/api/5.4/Illuminate/Database/Schema.html
+
+d:\xampp\htdocs\larashop>composer create-project laravel/laravel larashop
+php artisan make:controller Hello
+
+Http/Controllers
+
+Http
+----routes.php
+
+----Annonymus fuction
+Route::get('/',function(){
+	return 'hello world';
+});
+
+----- 
+Route:: get('hello','Hello@index');
+Route:: get('/hello/{name}','Hello@show');
+
+------
+Hello extends 
+class Hello extends Controller
+{
+    
+
+    public function index()
+    {
+        return 'Hello world from controller';   
+    }
+    public function show($name)
+    {
+        return view('hello\hello',array('name'=>$name));
+    }
+}
+
+----
+Run the following artisan command to create a migration table in Larashop database.
+
+php artisan migrate :install
+
+php artisan make:migration create_drinks_table
+
+php artisan migrate
+
+we will roll back the creation of the tables.
+php artisan migrate:rollback
